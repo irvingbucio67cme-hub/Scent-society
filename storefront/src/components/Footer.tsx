@@ -1,0 +1,32 @@
+export default function Footer() {
+  return (
+    <footer className="bg-charcoal text-cream/70 mt-24">
+      <div className="mx-auto max-w-6xl px-6 py-12 grid gap-10 sm:grid-cols-3">
+        <div>
+          <p className="font-display text-xl text-cream tracking-[0.1em]">SCENT SOCIETY</p>
+          <p className="mt-3 text-sm leading-relaxed">
+            Perfumes originales en Ciudad Juárez, Chihuahua, con envíos a todo México.
+          </p>
+        </div>
+        <div>
+          <p className="text-cream text-sm font-medium mb-3">Ayuda</p>
+          <ul className="space-y-2 text-sm">
+            <li>Envíos y entregas</li>
+            <li>Garantía de autenticidad</li>
+            <li>Preguntas frecuentes</li>
+          </ul>
+        </div>
+        <div>
+          <p className="text-cream text-sm font-medium mb-3">Contacto</p>
+          <ul className="space-y-2 text-sm">
+            <li>Ciudad Juárez, Chihuahua</li>
+            <li>hola@scentsociety.mx</li>
+          </ul>
+        </div>
+      </div>
+      <div className="border-t border-white/10 py-4 text-center text-xs">
+        © {new Date().getFullYear()} Scent Society. Todos los derechos reservados.
+      </div>
+    </footer>
+  )
+}

@@ -1,0 +1,26 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "storefront",
+      "runtimeExecutable": "/Users/mac/.local/node/bin/npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "storefront",
+      "port": 3000,
+      "env": {
+        "PATH": "/Users/mac/.local/node/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+      }
+    },
+    {
+      "name": "backend-admin",
+      "runtimeExecutable": "/Users/mac/.local/node/bin/npm",
+      "runtimeArgs": ["run", "dev"],
+      "cwd": "backend/apps/backend",
+      "port": 9000,
+      "env": {
+        "PATH": "/Users/mac/.local/node/bin:/Users/mac/Applications/Postgres.app/Contents/Versions/16/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+        "NODE_OPTIONS": "--dns-result-order=ipv4first"
+      }
+    }
+  ]
+}
