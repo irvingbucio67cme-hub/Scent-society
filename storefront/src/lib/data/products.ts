@@ -27,7 +27,7 @@ let cachedRegionId: string | null = null
 export async function getRegionId(): Promise<string | undefined> {
   if (cachedRegionId) return cachedRegionId
   const { regions } = await sdk.store.region.list()
-  const mx = regions.find((r) => r.currency_code === "mxn") || regions[0]
+  const mx = regions.find((r: { currency_code: string }) => r.currency_code === "mxn") || regions[0]
   cachedRegionId = mx?.id ?? null
   return cachedRegionId ?? undefined
 }
