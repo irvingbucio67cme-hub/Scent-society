@@ -11,7 +11,7 @@ const BADGES = [
   },
   {
     title: "Entrega el mismo día",
-    text: "Por el momento, entregas solo en Ciudad Juárez.",
+    text: "Por el momento, entregas en Ciudad Juárez y El Paso, TX.",
   },
   {
     title: "Pago contra entrega",
@@ -37,7 +37,7 @@ export default async function Home() {
           </h1>
           <p className="mt-6 text-ink/70 max-w-xl mx-auto">
             Fragancias de las casas más reconocidas del mundo, con entrega local
-            en Ciudad Juárez.
+            en Ciudad Juárez y El Paso, TX.
           </p>
           <Link
             href="/catalogo/perfumes"

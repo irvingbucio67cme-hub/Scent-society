@@ -5,8 +5,8 @@ export default function Footer() {
         <div>
           <p className="font-display text-xl text-ink tracking-[0.1em]">SCENT SOCIETY</p>
           <p className="mt-3 text-sm leading-relaxed">
-            Perfumes originales en Ciudad Juárez, Chihuahua. Por el momento, entregas
-            solo locales.
+            Perfumes originales en Ciudad Juárez, Chihuahua. Entregas locales en
+            Ciudad Juárez y El Paso, TX.
           </p>
         </div>
         <div>
@@ -20,6 +20,7 @@ export default function Footer() {
           <p className="text-ink text-sm font-medium mb-3">Contacto</p>
           <ul className="space-y-2 text-sm">
             <li>Ciudad Juárez, Chihuahua</li>
+            <li>El Paso, TX</li>
             <li>hola@scentsociety.mx</li>
           </ul>
         </div>
