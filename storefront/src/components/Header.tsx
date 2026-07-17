@@ -9,8 +9,8 @@ const NAV_LINKS = [
 
 export default function Header() {
   return (
-    <header className="bg-charcoal text-cream">
-      <div className="border-b border-white/10 text-center text-xs tracking-wide py-2 px-4">
+    <header className="bg-cream text-ink border-b border-gold/30">
+      <div className="border-b border-gold/30 text-center text-xs tracking-wide py-2 px-4">
         Envío el mismo día en Ciudad Juárez · Perfumes 100% originales
       </div>
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-5">
@@ -22,7 +22,7 @@ export default function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-cream/80 hover:text-gold transition-colors"
+              className="text-ink/80 hover:text-gold transition-colors"
             >
               {link.label}
             </Link>

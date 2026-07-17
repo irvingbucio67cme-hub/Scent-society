@@ -42,7 +42,7 @@ export default function ProductCard({ product }: { product: StoreProduct }) {
         )}
       </div>
       <div className="p-5">
-        <p className="text-xs uppercase tracking-[0.15em] text-gold-dark">{product.subtitle}</p>
+        <p className="text-xs uppercase tracking-[0.15em] text-gold">{product.subtitle}</p>
         <h3 className="font-display text-lg mt-1 text-ink">{product.title}</h3>
         {price !== undefined && (
           <p className="mt-2 text-sm text-ink/80">{formatMXN(price)}</p>

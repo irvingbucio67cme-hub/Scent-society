@@ -29,19 +29,19 @@ export default async function Home() {
 
   return (
     <>
-      <section className="bg-charcoal text-cream">
+      <section className="bg-cream text-ink border-b border-gold/30">
         <div className="mx-auto max-w-6xl px-6 py-28 text-center">
           <p className="text-xs uppercase tracking-[0.3em] text-gold">Scent Society</p>
           <h1 className="font-display text-4xl sm:text-5xl mt-4 max-w-2xl mx-auto leading-tight">
             Perfumes originales, sin intermediarios
           </h1>
-          <p className="mt-6 text-cream/70 max-w-xl mx-auto">
+          <p className="mt-6 text-ink/70 max-w-xl mx-auto">
             Fragancias de las casas más reconocidas del mundo, con garantía de
             autenticidad y entrega local en Ciudad Juárez.
           </p>
           <Link
             href="/catalogo"
-            className="inline-block mt-10 bg-gold text-charcoal px-8 py-3 text-sm tracking-wide hover:bg-gold-dark transition-colors"
+            className="inline-block mt-10 bg-ink text-cream px-8 py-3 text-sm tracking-wide hover:bg-gold transition-colors"
           >
             Explorar catálogo
           </Link>
