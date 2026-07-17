@@ -1,17 +1,19 @@
 import Link from "next/link"
+import MobileMenu from "./MobileMenu"
 
 const NAV_LINKS = [
   { href: "/", label: "Inicio" },
-  { href: "/catalogo", label: "Catálogo" },
+  { href: "/catalogo/perfumes", label: "Perfumes" },
+  { href: "/catalogo/decants", label: "Decants" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
 ]
 
 export default function Header() {
   return (
-    <header className="bg-cream text-ink border-b border-gold/30">
+    <header className="relative bg-cream text-ink border-b border-gold/30">
       <div className="border-b border-gold/30 text-center text-xs tracking-wide py-2 px-4">
-        Envío el mismo día en Ciudad Juárez · Perfumes 100% originales
+        Entregas el mismo día en Ciudad Juárez · Perfumes 100% originales
       </div>
       <div className="mx-auto max-w-6xl flex items-center justify-between px-6 py-5">
         <Link href="/" className="font-display text-2xl tracking-[0.15em]">
@@ -28,6 +30,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
+        <MobileMenu />
       </div>
     </header>
   )

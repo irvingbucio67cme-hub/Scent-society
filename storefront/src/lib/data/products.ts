@@ -17,7 +17,7 @@ export type StoreProduct = {
 export async function listProducts(): Promise<StoreProduct[]> {
   const { products } = await sdk.store.product.list({
     region_id: await getRegionId(),
-    fields: "id,title,subtitle,description,thumbnail,*images,*variants.calculated_price",
+    fields: "id,title,subtitle,description,thumbnail,*images,variants.id,variants.title,*variants.calculated_price",
   })
   return products as unknown as StoreProduct[]
 }
@@ -38,4 +38,18 @@ export function formatMXN(amount: number) {
     currency: "MXN",
     maximumFractionDigits: 0,
   }).format(amount)
+}
+
+const DECANT_SIZES = ["3ml", "5ml", "10ml"]
+
+export function pickPerfumeVariant(product: StoreProduct) {
+  return product.variants?.find((v) => !DECANT_SIZES.includes(v.title))
+}
+
+export function pickDecantVariant(product: StoreProduct) {
+  for (const size of DECANT_SIZES) {
+    const variant = product.variants?.find((v) => v.title === size)
+    if (variant) return variant
+  }
+  return undefined
 }

@@ -19,8 +19,15 @@ function BottleIcon() {
   )
 }
 
-export default function ProductCard({ product }: { product: StoreProduct }) {
-  const price = product.variants?.[0]?.calculated_price?.calculated_amount
+export default function ProductCard({
+  product,
+  variant,
+}: {
+  product: StoreProduct
+  variant?: StoreProduct["variants"][number]
+}) {
+  const activeVariant = variant ?? product.variants?.[0]
+  const price = activeVariant?.calculated_price?.calculated_amount
   const imageUrl = product.thumbnail || product.images?.[0]?.url
 
   return (
@@ -45,7 +52,12 @@ export default function ProductCard({ product }: { product: StoreProduct }) {
         <p className="text-xs uppercase tracking-[0.15em] text-gold">{product.subtitle}</p>
         <h3 className="font-display text-lg mt-1 text-ink">{product.title}</h3>
         {price !== undefined && (
-          <p className="mt-2 text-sm text-ink/80">{formatMXN(price)}</p>
+          <p className="mt-2 text-sm text-ink/80">
+            {formatMXN(price)}
+            {activeVariant?.title && (
+              <span className="text-ink/50"> · {activeVariant.title}</span>
+            )}
+          </p>
         )}
       </div>
     </Link>

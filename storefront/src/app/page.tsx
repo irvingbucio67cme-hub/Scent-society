@@ -7,15 +7,15 @@ export const dynamic = "force-dynamic"
 const BADGES = [
   {
     title: "100% originales",
-    text: "Cada perfume cuenta con garantía de autenticidad.",
+    text: "Perfumes originales, directo de proveedores confiables.",
   },
   {
     title: "Entrega el mismo día",
-    text: "En Ciudad Juárez, y envíos a todo México.",
+    text: "Por el momento, entregas solo en Ciudad Juárez.",
   },
   {
-    title: "Pago seguro",
-    text: "Múltiples métodos de pago protegidos.",
+    title: "Pago contra entrega",
+    text: "SPEI o efectivo.",
   },
 ]
 
@@ -36,11 +36,11 @@ export default async function Home() {
             Perfumes originales, sin intermediarios
           </h1>
           <p className="mt-6 text-ink/70 max-w-xl mx-auto">
-            Fragancias de las casas más reconocidas del mundo, con garantía de
-            autenticidad y entrega local en Ciudad Juárez.
+            Fragancias de las casas más reconocidas del mundo, con entrega local
+            en Ciudad Juárez.
           </p>
           <Link
-            href="/catalogo"
+            href="/catalogo/perfumes"
             className="inline-block mt-10 bg-ink text-cream px-8 py-3 text-sm tracking-wide hover:bg-gold transition-colors"
           >
             Explorar catálogo
